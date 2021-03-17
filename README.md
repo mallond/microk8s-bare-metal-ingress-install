@@ -94,8 +94,35 @@ spec:
         ports:
         - containerPort: 5678
 ```
+
+7. Ingress 
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: k8s-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /echo1
+          backend:
+            serviceName: echo1
+            servicePort: 5678
+        - path: /echo2
+          backend:
+            serviceName: echo2
+            servicePort: 5678
+
+```
 # Kubectl
-- sudo kubectl apply -f your.yaml
+- sudo kubectl apply -f your.yaml  
+- kubectl get svc  
+- kubectl get svc --namespace=ingress-nginx
+
 
 
 
