@@ -17,8 +17,7 @@ Build Process Cheat Sheet
    - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["172.31.23.252"]}}'
 
 ## Test Artifacts to be used with Ingress
-```{r klippy, echo=FALSE, include=TRUE}
-klippy::klippy()
+<code>
 apiVersion: v1
 kind: Service
 metadata:
@@ -51,7 +50,8 @@ spec:
         - "-text=echo1"
         ports:
         - containerPort: 5678
-```
+</code>
+
 # Kubectl
 - sudo kubectl apply -f your.yaml
 
