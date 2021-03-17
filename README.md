@@ -15,9 +15,9 @@ Build Process Cheat Sheet
 
 - [bare Metal](https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal)
 
-3. sudo kubectl get pods -n ingress-nginx   -l app.kubernetes.io/name=ingress-nginx --watch
-4. sudo kubectl get svc --namespace=ingress-nginx
-5. Set the Ingress loadbalancers External IP Address 
+2. sudo kubectl get pods -n ingress-nginx   -l app.kubernetes.io/name=ingress-nginx --watch
+3. sudo kubectl get svc --namespace=ingress-nginx
+4. Set the Ingress loadbalancers External IP Address 
    - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["172.31.23.252"]}}'
 
 5. Service -  apple
