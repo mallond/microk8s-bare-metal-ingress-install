@@ -17,83 +17,67 @@ Build Process Cheat Sheet
 4. Set the Ingress loadbalancers External IP Address 
    - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["172.31.23.252"]}}'
 
-5. Echo 1 Service 
+5. Service -  apple
 
-   sudo kubectl apply -f echo1.yaml
+   sudo kubectl apply -f service1.yaml
    
 ```
+kind: Pod
 apiVersion: v1
-kind: Service
 metadata:
-  name: echo1
+  name: apple-app
+  labels:
+    app: apple
 spec:
-  ports:
-  - port: 80
-    targetPort: 5678
-  selector:
-    app: echo1
+  containers:
+    - name: apple-app
+      image: hashicorp/http-echo
+      args:
+        - "-text=apple"
+
 ---
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: echo1
-spec:
-  selector:
-    matchLabels:
-      app: echo1
-  replicas: 2
-  template:
-    metadata:
-      labels:
-        app: echo1
-    spec:
-      containers:
-      - name: echo1
-        image: hashicorp/http-echo
-        args:
-        - "-text=echo1"
-        ports:
-        - containerPort: 5678
-```
 
-6. Echo 2 Service
-
-   sudo kubectl apply -f echo2.yaml 
-   
-   
-```
+kind: Service
 apiVersion: v1
-kind: Service
 metadata:
-  name: echo2
+  name: apple-service
 spec:
+  selector:
+    app: apple
   ports:
-  - port: 80
-    targetPort: 5678
-  selector:
-    app: echo2
----
-apiVersion: apps/v1
-kind: Deployment
+    - port: 5678 # Default port for image
+```
+
+6. Service - banana
+
+   sudo kubectl apply -f service2.yaml 
+   
+   
+```
+kind: Pod
+apiVersion: v1
 metadata:
-  name: echo2
+  name: banana-app
+  labels:
+    app: banana
+spec:
+  containers:
+    - name: banana-app
+      image: hashicorp/http-echo
+      args:
+        - "-text=banana"
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: banana-service
 spec:
   selector:
-    matchLabels:
-      app: echo2
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: echo2
-    spec:
-      containers:
-      - name: echo2
-        image: hashicorp/http-echo
-        args:
-        - "-text=echo2"
-        ports:
-        - containerPort: 5678
+    app: banana
+  ports:
+    - port: 5678 # Default port for image
 ```
 
 7. Ingress 
@@ -102,23 +86,24 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: k8s-ingress
+  name: example-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
       paths:
-        - path: /echo1
+        - path: /apple
           backend:
-            serviceName: echo1
+            serviceName: apple-service
             servicePort: 5678
-        - path: /echo2
+        - path: /banana
           backend:
-            serviceName: echo2
+            serviceName: banana-service
             servicePort: 5678
 
 ```
+
 # Kubectl
 - sudo kubectl apply -f your.yaml  
 - kubectl get svc  
