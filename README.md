@@ -18,6 +18,7 @@ Build Process Cheat Sheet
 
 ## Test Artifacts to be used with Ingress
 <code>
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -50,6 +51,7 @@ spec:
         - "-text=echo1"
         ports:
         - containerPort: 5678
+```
 </code>
 
 # Kubectl
