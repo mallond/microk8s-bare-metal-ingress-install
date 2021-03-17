@@ -17,7 +17,7 @@ Build Process Cheat Sheet
    - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["172.31.23.252"]}}'
 
 5. Echo 1 Service 
--- sudo kubectl apply -f echo1.yaml
+   sudo kubectl apply -f echo1.yaml
 ```
 apiVersion: v1
 kind: Service
@@ -54,7 +54,7 @@ spec:
 ```
 
 6. Echo 2 Service
--- sudo kubectl apply -f echo2.yaml
+   sudo kubectl apply -f echo2.yaml
 ```
 apiVersion: v1
 kind: Service
