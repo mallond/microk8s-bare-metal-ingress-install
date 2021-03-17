@@ -18,6 +18,9 @@ Build Process Cheat Sheet
 
 ## Test Artifacts to be used with Ingress
 
+### Echo 1 Service
+- sudo kubectl apply -f echo1.yaml
+- 
 ```
 apiVersion: v1
 kind: Service
