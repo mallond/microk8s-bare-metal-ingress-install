@@ -16,11 +16,8 @@ Build Process Cheat Sheet
 4. Set the Ingress loadbalancers External IP Address 
    - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["172.31.23.252"]}}'
 
-## Test Artifacts to be used with Ingress
-
-### Echo 1 Service
+5. Echo 1 Service 
 - sudo kubectl apply -f echo1.yaml
-- 
 ```
 apiVersion: v1
 kind: Service
@@ -56,6 +53,42 @@ spec:
         - containerPort: 5678
 ```
 
+6. Echo 2 Service
+- sudo kubectl apply -f echo2.yaml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo2
+spec:
+  ports:
+  - port: 80
+    targetPort: 5678
+  selector:
+    app: echo2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo2
+spec:
+  selector:
+    matchLabels:
+      app: echo2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: echo2
+    spec:
+      containers:
+      - name: echo2
+        image: hashicorp/http-echo
+        args:
+        - "-text=echo2"
+        ports:
+        - containerPort: 5678
+```
 # Kubectl
 - sudo kubectl apply -f your.yaml
 
