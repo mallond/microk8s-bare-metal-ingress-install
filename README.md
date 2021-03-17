@@ -7,7 +7,7 @@ Build Process Cheat Sheet
 1. sudo snap install microk8s --classic
 2. sudo microk8s status --wait-ready
 3. sudo microk8s enable dashboard dns registry istio ingress
-4. sudo snap alias microk8s.kubectl kubectl    'create alias
+4. sudo snap alias microk8s.kubectl kubectl    //'create alias'
 
 ## Ingress Install - Ubuntu 20.x
 1. sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/do/deploy.yaml
