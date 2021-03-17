@@ -14,7 +14,7 @@ Build Process Cheat Sheet
 2. sudo kubectl get pods -n ingress-nginx   -l app.kubernetes.io/name=ingress-nginx --watch
 3. sudo kubectl get svc --namespace=ingress-nginx
 4. Set the Ingress loadbalancers External IP Address 
-  - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["172.31.23.252"]}}'
+   - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["172.31.23.252"]}}'
 
 # Kubectl
 - sudo kubectl apply -f your.yaml
