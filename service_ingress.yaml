@@ -10,7 +10,8 @@ spec:
     - demo.azure.com
     secretName: aks-ingress-tls
   rules:
-  - http:
+  - host: demo.azure.com
+    http:
       paths:
         - path: /apple
           backend:
