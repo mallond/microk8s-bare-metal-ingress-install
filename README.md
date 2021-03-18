@@ -89,6 +89,10 @@ spec:
 
 7. Ingress 
 
+sudo kubectl apply -f service_ingress.yaml 
+   or  
+   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_ingress.yaml
+
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
