@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Installing microk8s... make take a few minutes'
+echo 'Installing microk8s... may take a few minutes'
 sudo snap install microk8s --classic
 sudo microk8s status --wait-ready
 sudo microk8s enable dashboard dns registry ingress
