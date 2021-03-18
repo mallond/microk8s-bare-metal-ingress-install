@@ -125,6 +125,10 @@ spec:
             servicePort: 5678
 
 ```
+# Ingress Basic Authentication
+- htpasswd -c auth myfoo 
+- sudo kubectl create secret generic basic-auth --from-file=auth
+- sudo kubectl get secret basic-auth -o yaml
 
 # Test Ingress Controller
 
