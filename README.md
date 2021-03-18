@@ -93,8 +93,10 @@ sudo kubectl apply -f service_ingress.yaml
    or  
    sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_ingress.yaml
 
-> Note: Ingress implecetly supports TLS and the below annotations will force a redirect out of http to https.
-> <img src="https://user-images.githubusercontent.com/993459/111708157-940b1b00-8802-11eb-81b3-f48a3a7c25b0.pn" width="100" height="100">
+> Note: Ingress implecetly supports TLS and the below annotations will force a redirect out of http to https.  
+>
+<img src="https://user-images.githubusercontent.com/993459/111708157-940b1b00-8802-11eb-81b3-f48a3a7c25b0.pn" width="100" height="100"/>
+
 ```
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
