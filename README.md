@@ -150,10 +150,11 @@ kubectl create secret tls aks-ingress-tls \
 - curl https://10.152.183.142/banana -k
 - Note: -k allows unsecured connections
 
-# Kubectl
+# Kubectl useful memory aid
 - sudo kubectl apply -f your.yaml  
 - kubectl get svc  
 - kubectl get svc --namespace=ingress-nginx
+- kubectl get namespace
 
 
 
