@@ -5,13 +5,8 @@ metadata:
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
-  tls:
-  - hosts:
-    - demo.azure.com
-    secretName: aks-ingress-tls
   rules:
-  - host: demo.azure.com
-    http:
+  - http:
       paths:
         - path: /apple
           backend:
