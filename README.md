@@ -56,6 +56,8 @@ spec:
 6. Service - banana
 
    sudo kubectl apply -f service2.yaml 
+   or  
+   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_banana.yaml  
    
    
 ```
