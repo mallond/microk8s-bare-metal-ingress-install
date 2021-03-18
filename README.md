@@ -133,6 +133,20 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - netstat -na | grep :80
 - sudo ufw allow 80
 
+## TLS
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -out aks-ingress-tls.crt \
+    -keyout aks-ingress-tls.key \
+    -subj "/CN=demo.azure.com/O=aks-ingress-tls"
+```
+```
+kubectl create secret tls aks-ingress-tls \
+    --namespace ingress-nginx \
+    --key aks-ingress-tls.key \
+    --cert aks-ingress-tls.crt
+```
+
 # Kubectl
 - sudo kubectl apply -f your.yaml  
 - kubectl get svc  
