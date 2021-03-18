@@ -13,7 +13,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /apple
         backend:
           serviceName: http-svc
           servicePort: 80
