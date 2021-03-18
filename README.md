@@ -115,6 +115,9 @@ spec:
 
 ```
 
+# Test Ingress Controller
+- 
+
 # Kubectl
 - sudo kubectl apply -f your.yaml  
 - kubectl get svc  
