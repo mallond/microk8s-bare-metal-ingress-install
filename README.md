@@ -22,7 +22,9 @@ Build Process Cheat Sheet
 
 5. Service -  apple
 
-   sudo kubectl apply -f service1.yaml
+   sudo kubectl apply -f service1.yaml  
+   or  
+   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_apple.yaml  
    
 ```
 kind: Pod
