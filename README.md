@@ -129,7 +129,9 @@ ingress-nginx-controller             NodePort    10.152.183.142   <none>        
 
 ## Add External IP
 sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["3.15.237.254"]}}'
-
+- netstat -ntlu
+- netstat -na | grep :80
+- sudo ufw allow 80
 
 # Kubectl
 - sudo kubectl apply -f your.yaml  
