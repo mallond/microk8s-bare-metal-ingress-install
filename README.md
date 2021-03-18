@@ -146,6 +146,9 @@ kubectl create secret tls aks-ingress-tls \
     --key aks-ingress-tls.key \
     --cert aks-ingress-tls.crt
 ```
+#### Test TLS
+- curl https://10.152.183.142/banana -k
+- Note: -k allows unsecured connections
 
 # Kubectl
 - sudo kubectl apply -f your.yaml  
