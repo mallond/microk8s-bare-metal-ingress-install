@@ -12,5 +12,5 @@ spec:
       paths:
         - path: /selenium/chrome
           backend:
-            serviceName: selenium-ingress
+            serviceName: selenium-chrome-app
             servicePort: 4444
