@@ -1,0 +1,22 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: selenium-chrome-app
+  labels:
+    app: selenium-chrome-app 
+spec:
+  containers:
+    - name: selenium-chrome-app
+      image: selenium/standalone-chrome
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: selenium-chrome-app
+spec:
+  selector:
+    app: selenium-chrome-app
+  ports:
+    - port: 4444 # Default port for image
