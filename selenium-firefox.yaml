@@ -1,0 +1,22 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: selenium-firefox-app
+  labels:
+    app: selenium-firefox-app 
+spec:
+  containers:
+    - name: selenium-firefox-app
+      image: selenium/standalone-firefox
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: selenium-firefox-app
+spec:
+  selector:
+    app: selenium-firefox-app
+  ports:
+    - port: 4444 # Default port for image
