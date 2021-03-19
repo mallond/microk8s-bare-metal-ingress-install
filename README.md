@@ -147,6 +147,8 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - netstat -ntlu
 - netstat -na | grep :80
 - sudo ufw allow 80
+- sudo ufw enable
+
 
 
 #### Test TLS
@@ -158,7 +160,17 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - kubectl get svc  
 - kubectl get svc --namespace=ingress-nginx
 - kubectl get namespace
+- kubectl cluster-info
+- kubectl -n kube-system edit service kubernetes-dashboar    "Real time editing"
+- curl http://localhost:32000/v2/_catalog?n=1                "Microk8s local registry"
+- kubectl get deployments --all-namespacessudo microk8s dashboard-proxy "Dashboard check and token"
+- 
 
+# Misc
+ClusterIP: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
 
+NodePort: Exposes the service on each Node’s IP at a static port (the NodePort). A ClusterIP service, to which the NodePort service will route, is automatically created. You’ll be able to contact the NodePort service, from outside the cluster, by requesting <NodeIP>:<NodePort>.
+
+LoadBalancer: Exposes the service externally using a cloud provider’s load balancer. NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
 
 
