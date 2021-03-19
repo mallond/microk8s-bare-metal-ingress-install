@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /selenium/hub
+        - path: /selenium/chrome
           backend:
-            serviceName: selenium-hub
-            servicePort: 5555
+            serviceName: selenium-ingress
+            servicePort: 4444
