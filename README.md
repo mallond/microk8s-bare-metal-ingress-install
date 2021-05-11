@@ -161,9 +161,11 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - sudo kubectl apply -f your.yaml  
 - kubectl get svc  
 - kubectl get svc --namespace=ingress-nginx
+- kubectl get svs --all-namespaces
 - kubectl get namespace
 - kubectl cluster-info
-- kubectl -n kube-system edit service kubernetes-dashboar    "Real time editing"
+- microk8s dashboard-proxy
+- kubectl -n kube-system edit service kubernetes-dashboard    "Real time editing"
 - curl http://localhost:32000/v2/_catalog?n=1                "Microk8s local registry"
 - kubectl get deployments --all-namespacessudo microk8s dashboard-proxy "Dashboard check and token"
 - 
