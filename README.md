@@ -151,7 +151,8 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - sudo ufw allow 80
 - sudo ufw enable
 
-
+## Jenkins
+- kubectl create namespace jenkins
 
 #### Test TLS
 - curl https://10.152.183.142/banana -k
