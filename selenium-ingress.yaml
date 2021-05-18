@@ -19,6 +19,6 @@ spec:
             serviceName: selenium-firefox-app
             servicePort: 4444
         - path: /influxdb
-         backend:
+          backend:
            serviceName: influxdb
            servicePort: 8086
