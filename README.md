@@ -36,7 +36,8 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 sudo kubectl get svc --namespace=ingress-nginx
 ```
 
-5. Service -  apple
+## Service Installs
+1. Service -  apple
 
    sudo kubectl apply -f service1.yaml  
    or  
@@ -67,6 +68,12 @@ spec:
     app: apple
   ports:
     - port: 5678 # Default port for image
+```
+List the Apple Service service
+```
+sudo kubectl get svc --namespace default
+sudo kubectl get pods -n default
+
 ```
 
 6. Service - banana
