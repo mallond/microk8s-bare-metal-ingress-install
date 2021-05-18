@@ -180,7 +180,8 @@ spec:
 
 - sudo kubectl get svc --namespace=ingress-nginx
 ```
-~$ sudo kubectl get svc --namespace=ingress-nginx
+sudo kubectl get svc --namespace=ingress-nginx
+
 NAME                                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
 ingress-nginx-controller-admission   ClusterIP   10.152.183.29    <none>        443/TCP                      74s
 ingress-nginx-controller             NodePort    10.152.183.142   <none>        80:30609/TCP,443:31953/TCP   73s
