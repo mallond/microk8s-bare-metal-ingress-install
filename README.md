@@ -76,12 +76,11 @@ sudo kubectl get pods -n default
 
 ```
 
-6. Service - banana
+2. Service - banana
 
-   sudo kubectl apply -f service2.yaml 
-   or  
-   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_banana.yaml  
-   
+   sudo kubectl apply -f service2.yaml   
+   or   
+   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_banana.yaml   
    
 ```
 kind: Pod
@@ -110,7 +109,14 @@ spec:
     - port: 5678 # Default port for image
 ```
 
-7. Ingress 
+List the Bannana Service service
+```
+sudo kubectl get svc --namespace default
+sudo kubectl get pods -n default
+
+```
+
+## Ingress 
 
 sudo kubectl apply -f service_ingress.yaml 
    or  
