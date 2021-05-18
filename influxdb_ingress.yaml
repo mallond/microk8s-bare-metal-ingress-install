@@ -10,7 +10,8 @@ metadata:
 spec:
  rules:
  - http:
-     paths: /influxdb
-     - backend:
-         serviceName: influxdb
-         servicePort: 8086
+     paths:
+       - path: /influxdb
+         backend:
+           serviceName: influxdb
+           servicePort: 8086
