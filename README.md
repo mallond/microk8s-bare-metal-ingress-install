@@ -176,12 +176,7 @@ spec:
             servicePort: 5678
 
 ```
-# Ingress Basic Authentication
-- htpasswd -c auth myfoo 
-- sudo kubectl create secret generic basic-auth --from-file=auth
-- sudo kubectl get secret basic-auth -o yaml
-
-# Test Ingress Controller
+## Test Ingress Controller
 
 - sudo kubectl get svc --namespace=ingress-nginx
 ```
@@ -192,6 +187,13 @@ ingress-nginx-controller             NodePort    10.152.183.142   <none>        
 ```
 - curl 10.152.183.142/apple
 - curl 10.152.183.142/banana
+- 
+# Ingress Basic Authentication
+- htpasswd -c auth myfoo 
+- sudo kubectl create secret generic basic-auth --from-file=auth
+- sudo kubectl get secret basic-auth -o yaml
+
+
 
 ## Add External IP
 sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["3.15.237.254"]}}'
