@@ -160,6 +160,7 @@ sudo kubectl get pods -n influxdb
 - curl http://localhost:32000/v2/_catalog?n=1                "Microk8s local registry"
 - kubectl get deployments --all-namespacessudo microk8s dashboard-proxy "Dashboard check and token"
 - kubectl describe svc influxdb -n influxdb
+- kubectl logs -l app=banana
 
 # Misc
 ClusterIP: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
