@@ -20,5 +20,5 @@ spec:
             servicePort: 5678       
         - path: /influxdb
           backend:
-           serviceName: influxdb
-           servicePort: 8086
+            serviceName: influxdb
+            servicePort: 8086
