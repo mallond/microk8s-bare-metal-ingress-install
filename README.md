@@ -38,7 +38,7 @@ sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx
 ```
 - Reference [bare Metal](https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal)
 
-2. View Creation of Ingress
+2. View Creation of Ingress (takes af few minutes)
 ```
 sudo kubectl get pods -n ingress-nginx   -l app.kubernetes.io/name=ingress-nginx --watch
 ```
