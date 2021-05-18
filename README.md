@@ -43,32 +43,7 @@ sudo kubectl get svc --namespace=ingress-nginx
    or  
    sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_apple.yaml  
    
-```
-kind: Pod
-apiVersion: v1
-metadata:
-  name: apple-app
-  labels:
-    app: apple
-spec:
-  containers:
-    - name: apple-app
-      image: hashicorp/http-echo
-      args:
-        - "-text=apple"
 
----
-
-kind: Service
-apiVersion: v1
-metadata:
-  name: apple-service
-spec:
-  selector:
-    app: apple
-  ports:
-    - port: 5678 # Default port for image
-```
 List the Apple Service service
 ```
 sudo kubectl get svc --namespace default
@@ -82,32 +57,6 @@ sudo kubectl get pods -n default
    or   
    sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_banana.yaml   
    
-```
-kind: Pod
-apiVersion: v1
-metadata:
-  name: banana-app
-  labels:
-    app: banana
-spec:
-  containers:
-    - name: banana-app
-      image: hashicorp/http-echo
-      args:
-        - "-text=banana"
-
----
-
-kind: Service
-apiVersion: v1
-metadata:
-  name: banana-service
-spec:
-  selector:
-    app: banana
-  ports:
-    - port: 5678 # Default port for image
-```
 
 List the Bannana Service service
 ```
@@ -122,28 +71,7 @@ sudo kubectl apply -f service_ingress.yaml
 or  
 sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_ingress.yaml
 ```
-```
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: example-ingress
-  annotations:
-    ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-spec:
-  rules:
-  - http:
-      paths:
-        - path: /apple
-          backend:
-            serviceName: apple-service
-            servicePort: 5678
-        - path: /banana
-          backend:
-            serviceName: banana-service
-            servicePort: 5678
-```
+
 > Note: Ingress implecetly supports TLS and the below annotations will force a redirect out of http to https.  
 >
 <img src="https://user-images.githubusercontent.com/993459/111708157-940b1b00-8802-11eb-81b3-f48a3a7c25b0.png" width="200" height="100"/>
@@ -153,29 +81,7 @@ spec:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 ```
 
-```
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: example-ingress
-  annotations:
-    ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-spec:
-  rules:
-  - http:
-      paths:
-        - path: /apple
-          backend:
-            serviceName: apple-service
-            servicePort: 5678
-        - path: /banana
-          backend:
-            serviceName: banana-service
-            servicePort: 5678
 
-```
 ## Test Ingress Controller
 
 - sudo kubectl get svc --namespace=ingress-nginx
