@@ -84,6 +84,20 @@ sudo kubectl get pods -n default
 
 ```
 
+3. InfluxDB 
+
+   sudo kubectl apply -f influxdb.yaml  
+   or  
+   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/influxdb.yaml 
+   
+
+List the Influx Service service
+```
+sudo kubectl get svc --namespace influxdb
+sudo kubectl get pods -n influxdb
+
+```
+
 ## Ingress 
 
 sudo kubectl apply -f service_ingress.yaml 
@@ -128,19 +142,7 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - sudo ufw allow 80
 - sudo ufw enable
 
-## InfluxDB 
 
-   sudo kubectl apply -f influxdb.yaml  
-   or  
-   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/influxdb.yaml 
-   
-
-List the Influx Service service
-```
-sudo kubectl get svc --namespace influxdb
-sudo kubectl get pods -n influxdb
-
-```
 
 
 #### Test TLS
