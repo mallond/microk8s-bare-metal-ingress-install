@@ -85,11 +85,11 @@ sudo kubectl get pods -n default
 ```
 
 ## Ingress 
-```
+
 sudo kubectl apply -f service_ingress.yaml 
 or  
 sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_ingress.yaml
-```
+
 
 > Note: Ingress implecetly supports TLS and the below annotations will force a redirect out of http to https.  
 >
@@ -129,13 +129,12 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - sudo ufw enable
 
 ## InfluxDB 
-```
+
    sudo kubectl apply -f influxdb.yaml  
    or  
    sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/influxdb.yaml 
    
-https://raw.githubusercontent.com/mallond/microk8s/main/influxdb_ingress.yaml
-```
+
 List the Influx Service service
 ```
 sudo kubectl get svc --namespace influxdb
