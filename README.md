@@ -19,9 +19,12 @@ sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx
 ```
 - Reference [bare Metal](https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal)
 
-2. sudo kubectl get pods -n ingress-nginx   -l app.kubernetes.io/name=ingress-nginx --watch
-3. sudo kubectl get svc --namespace=ingress-nginx
-4. Set the Ingress loadbalancers External IP Address 
+2. View Creation of Ingress
+```
+sudo kubectl get pods -n ingress-nginx   -l app.kubernetes.io/name=ingress-nginx --watch
+```
+4. sudo kubectl get svc --namespace=ingress-nginx
+5. Set the Ingress loadbalancers External IP Address 
    - sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["3.15.237.254"]}}'
 
 5. Service -  apple
