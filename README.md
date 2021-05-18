@@ -203,8 +203,20 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - sudo ufw allow 80
 - sudo ufw enable
 
-## Jenkins
-- kubectl create namespace jenkins
+## InfluxDB 
+```
+   sudo kubectl apply -f influxdb.yaml  
+   or  
+   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/influxdb.yaml 
+   
+https://raw.githubusercontent.com/mallond/microk8s/main/influxdb_ingress.yaml
+```
+List the Influx Service service
+```
+sudo kubectl get svc --namespace influxdb
+sudo kubectl get pods -n influxdb
+
+```
 
 #### Test TLS
 - curl https://10.152.183.142/banana -k
