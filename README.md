@@ -225,10 +225,9 @@ sudo kubectl get pods -n influxdb
    
 https://raw.githubusercontent.com/mallond/microk8s/main/influxdb_ingress.yaml
 ```
-List the Influx Service service
+List the Influx Ingress service
 ```
-sudo kubectl get svc --namespace influxdb
-sudo kubectl get pods -n influxdb
+sudo kubectl get svc --namespace=influxdb
 
 ```
 
