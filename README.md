@@ -163,6 +163,7 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - kubectl describe svc influxdb -n influxdb
 - kubectl logs -l app=banana
 - kubectl cluster-info
+- kubectl get services -n kube-system
 
 # Misc
 ClusterIP: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
