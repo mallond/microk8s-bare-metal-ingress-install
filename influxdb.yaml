@@ -29,7 +29,7 @@ spec:
                   - containerPort: 8086
                     name: influxdb
                 volumeMounts:
-                  - mountPath: /root/.influxdbv2
+                  - mountPath: /var/local/.influxdbv2
                     name: data
     volumeClaimTemplates:
       - metadata:
