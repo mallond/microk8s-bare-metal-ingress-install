@@ -217,6 +217,20 @@ sudo kubectl get svc --namespace influxdb
 sudo kubectl get pods -n influxdb
 
 ```
+## InfluxDB Ingress
+```
+   sudo kubectl apply -f influxdb_ingress.yaml  
+   or  
+   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/influxdb_ingress.yaml
+   
+https://raw.githubusercontent.com/mallond/microk8s/main/influxdb_ingress.yaml
+```
+List the Influx Service service
+```
+sudo kubectl get svc --namespace influxdb
+sudo kubectl get pods -n influxdb
+
+```
 
 #### Test TLS
 - curl https://10.152.183.142/banana -k
