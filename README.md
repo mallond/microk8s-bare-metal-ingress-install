@@ -19,6 +19,16 @@ sudo microk8s enable dashboard dns registry ingress
 sudo snap alias microk8s.kubectl kubectl    
 ```
 1. After the above install, you will get the message. re-login to have the alias enabled
+```
+kubectl
+Insufficient permissions to access MicroK8s.
+You can either try again with sudo or add the user cloud_user to the 'microk8s' group:
+
+    sudo usermod -a -G microk8s cloud_user
+    sudo chown -f -R cloud_user ~/.kube
+
+The new group will be available on the user's next login.
+```
 
 ## Ingress Install - Ubuntu 20.x
 
