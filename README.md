@@ -186,8 +186,8 @@ NAME                                 TYPE        CLUSTER-IP       EXTERNAL-IP   
 ingress-nginx-controller-admission   ClusterIP   10.152.183.29    <none>        443/TCP                      74s
 ingress-nginx-controller             NodePort    10.152.183.142   <none>        80:30609/TCP,443:31953/TCP   73s
 ```
-- curl 10.152.183.142/apple
-- curl 10.152.183.142/banana
+- curl https://10.152.183.142/apple -k
+- curl https://10.152.183.142/bannana -k
 - 
 # Ingress Basic Authentication
 - htpasswd -c auth myfoo 
