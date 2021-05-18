@@ -15,7 +15,7 @@ Build Process Cheat Sheet
 
 1. sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/baremetal/deploy.yaml
 
-- [bare Metal](https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal)
+- Reference [bare Metal](https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal)
 
 2. sudo kubectl get pods -n ingress-nginx   -l app.kubernetes.io/name=ingress-nginx --watch
 3. sudo kubectl get svc --namespace=ingress-nginx
