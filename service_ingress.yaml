@@ -17,4 +17,8 @@ spec:
         - path: /banana
           backend:
             serviceName: banana-service
-            servicePort: 5678
+            servicePort: 5678       
+        - path: /influxdb
+          backend:
+           serviceName: influxdb
+           servicePort: 8086
