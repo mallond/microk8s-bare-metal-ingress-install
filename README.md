@@ -13,7 +13,7 @@ sudo snap install microk8s --classic
 sudo microk8s status --wait-ready
 ```
 ```
-sudo microk8s enable dashboard dns registry ingress
+sudo microk8s enable dashboard dns registry helm ingress
 ```
 ```
 sudo snap alias microk8s.kubectl kubectl    
@@ -162,6 +162,7 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - kubectl get deployments --all-namespacessudo microk8s dashboard-proxy "Dashboard check and token"
 - kubectl describe svc influxdb -n influxdb
 - kubectl logs -l app=banana
+- kubectl cluster-info
 
 # Misc
 ClusterIP: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
