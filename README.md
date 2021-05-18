@@ -99,7 +99,7 @@ sudo kubectl get pods -n influxdb
 ```
 
 ## Ingress 
-
+1. Ingress  
 sudo kubectl apply -f service_ingress.yaml 
 or  
 sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/service_ingress.yaml
