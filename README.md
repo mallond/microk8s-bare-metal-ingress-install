@@ -8,8 +8,14 @@ Build Process Cheat Sheet
 ## Base Install - Ubuntu 20.x
 ```
 sudo snap install microk8s --classic
+```
+```
 sudo microk8s status --wait-ready
+```
+```
 sudo microk8s enable dashboard dns registry ingress
+```
+```
 sudo snap alias microk8s.kubectl kubectl    
 ```
 1. After the above install, you will get the message. re-login to have the alias enabled
