@@ -7,7 +7,7 @@ Build Process Cheat Sheet
 
 ## Base Install - Ubuntu 20.x
 ```
-sudo snap install microk8s --classic
+sudo snap install microk8s --classic --channel=1.21/stable
 ```
 ```
 sudo microk8s status --wait-ready
