@@ -165,6 +165,25 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - kubectl cluster-info
 - kubectl get services -n kube-system
 
+# Helm useful memory aid
+- helm list
+- helm list --all 
+- helm repo (list|add|update) 
+- helm search  
+- helm inspect <chart-name> 
+- hem install --set a=b -f config.yaml <chart-name> -n <release-name> # --set take precedented, merge into -f 
+- helm status <deployment-name> 
+- helm delete <deployment-name> 
+- helm inspect values <chart-name> 
+- helm upgrade -f config.yaml <deployment-name> <chart-name> 
+- helm rollback <deployment-name> <version> 
+- helm create <chart-name> 
+- helm package <chart-name> 
+- helm lint <chart-name> 
+- helm dep up <chart-name> # update dependency 
+- helm get manifest <deployment-name> # prints out all of the Kubernetes resources that were uploaded to the server 
+- helm install --debug --dry-run <deployment-name> # it will return the rendered template to you so you can see the output 
+
 # Misc
 ClusterIP: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
 
