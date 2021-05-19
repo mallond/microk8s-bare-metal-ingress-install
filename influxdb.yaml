@@ -42,16 +42,3 @@ spec:
                 requests:
                     storage: 10G
 ---
-apiVersion: v1
-kind: Service
-metadata:
-    name: influxdb-service
-    namespace: influxdb
-spec:
-    ports:
-      - name: influxdb-service
-        port: 31234
-        targetPort: 31234
-    selector:
-        app: influxdb
-    type: ClusterIP
