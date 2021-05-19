@@ -3,6 +3,11 @@
 # microk8s - Bare Metal Quick Install
 Build Process Cheat Sheet  
 
+> Helm Problems with Microk8s
+> ```
+kubectl config view --raw > ~/.kube/config
+```
+
 ![download](https://user-images.githubusercontent.com/993459/111545821-ea5d5880-8733-11eb-9352-d22f812e9fb0.png)
 
 ## Base Install - Ubuntu 20.x
