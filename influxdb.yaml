@@ -67,7 +67,6 @@ spec:
             name: ifql
   volumeClaimTemplates:
   - metadata:
-      namespace: monitoring
       name: data
     spec:
       accessModes:
