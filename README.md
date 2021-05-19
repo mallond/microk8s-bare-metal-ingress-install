@@ -3,10 +3,7 @@
 # microk8s - Bare Metal Quick Install
 Build Process Cheat Sheet  
 
- Helm Problems with Microk8s
- ```
-kubectl config view --raw > ~/.kube/config
-```
+ 
 
 ![download](https://user-images.githubusercontent.com/993459/111545821-ea5d5880-8733-11eb-9352-d22f812e9fb0.png)
 
@@ -91,17 +88,15 @@ sudo kubectl get pods -n default
 
 3. InfluxDB 
 
-   sudo kubectl apply -f influxdb.yaml  
-   or  
-   sudo kubectl apply -f https://raw.githubusercontent.com/mallond/microk8s/main/influxdb.yaml 
-   
-
-List the Influx Service service
+Chart by Bitnami https://github.com/bitnami/charts/tree/master/bitnami/influxdb/#installing-the-chart
 ```
-sudo kubectl get svc --namespace influxdb
-sudo kubectl get pods -n influxdb
-
+kubectl config view --raw > ~/.kube/config
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install my-release azure-marketplace/influxdb
 ```
+
+
+
 
 ## Ingress 
 1. Ingress  
