@@ -3,8 +3,8 @@
 # microk8s - Bare Metal Quick Install
 Build Process Cheat Sheet  
 
-> Helm Problems with Microk8s
-> ```
+ Helm Problems with Microk8s
+ ```
 kubectl config view --raw > ~/.kube/config
 ```
 
