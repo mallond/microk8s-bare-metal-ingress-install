@@ -45,11 +45,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-    name: influxdb
+    name: influxdb-service
     namespace: influxdb
 spec:
     ports:
-      - name: influxdb
+      - name: influxdb-service
         port: 31234
         targetPort: 31234
     selector:
