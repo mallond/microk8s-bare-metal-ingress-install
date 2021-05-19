@@ -7,9 +7,9 @@ metadata:
   namespace: monitoring
 spec:
   ports:
-  - port: 8086
+  - port: 3000
     protocol: TCP
-    targetPort: 8086
+    targetPort: 3000
   selector:
     app: grafana
   type: LoadBalancer
