@@ -37,6 +37,9 @@ The new group will be available on the user's next login.
 1. Install Ingress Bare Metal
 ```
 sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/baremetal/deploy.yaml
+or
+sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.1/deploy/static/provider/baremetal/deploy.yaml
+
 ```
 - Reference [bare Metal](https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal)
 
