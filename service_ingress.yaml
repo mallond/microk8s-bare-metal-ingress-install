@@ -28,6 +28,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: influxdb-demo
+              name: my-release-influxdb 
               port:
                 number: 31234
