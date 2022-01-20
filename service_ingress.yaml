@@ -28,6 +28,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: my-release-influxdb 
+              name: my-release-influxdb2
               port:
                 number: 8086
