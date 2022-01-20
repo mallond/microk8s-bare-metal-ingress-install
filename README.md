@@ -101,7 +101,7 @@ helm install my-release bitnami/influxdb
 
 
 
-## Ingress 
+## Ingress Services YAML
 1. Ingress  
 sudo kubectl apply -f service_ingress.yaml 
 or  
