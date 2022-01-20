@@ -95,8 +95,8 @@ sudo kubectl get pods -n default
 Chart by Bitnami https://github.com/bitnami/charts/tree/master/bitnami/influxdb/#installing-the-chart
 ```
 kubectl config view --raw > ~/.kube/config
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm install my-release bitnami/influxdb
+helm repo add influxdata https://helm.influxdata.com/
+helm upgrade --install my-release influxdata/influxdb2
 ```
 
 
