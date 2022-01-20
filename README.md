@@ -32,6 +32,9 @@ You can either try again with sudo or add the user cloud_user to the 'microk8s' 
 The new group will be available on the user's next login.
 ```
 
+## Install Helm
+[Helm Install](https://helm.sh/docs/intro/install/)
+
 ## Ingress Install - Ubuntu 20.x
 
 1. Install Ingress Bare Metal
