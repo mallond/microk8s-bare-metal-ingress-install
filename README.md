@@ -95,7 +95,7 @@ Chart by Bitnami https://github.com/bitnami/charts/tree/master/bitnami/influxdb/
 ```
 kubectl config view --raw > ~/.kube/config
 helm repo add bitnami https://charts.bitnami.com/bitnami
-helm install my-release azure-marketplace/influxdb
+helm install my-release bitnami/influxdb
 ```
 
 
