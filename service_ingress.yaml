@@ -30,4 +30,4 @@ spec:
             service:
               name: my-release-influxdb2
               port:
-                number: 8086
+                number: 80
