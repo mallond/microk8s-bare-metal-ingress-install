@@ -53,7 +53,7 @@ sudo kubectl get svc --namespace=ingress-nginx
 ```
 4. Set the Ingress loadbalancers External IP Address - Replace IP Address
 ```
-sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "NodePort", "externalIPs":["54.244.4.114"]}}'
+sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["54.244.4.114"]}}'
 ```
 5. List Services with ingress-nginx namespace. Notice that now there is an external IP
 ```
