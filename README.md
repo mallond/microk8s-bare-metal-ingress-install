@@ -152,6 +152,12 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 microk8s dashboard-proxy
 ```
 
+## Windows II Hacks
+Escape the characters with \"
+```
+microk8s kubectl patch svc apple-service -p '{\"spec\": {\"type\": \"LoadBalancer\", \"externalIPs\":[\"172.23.100.158\"]}}'
+```
+
 #### Test TLS
 - curl https://10.152.183.142/banana -k
 - Note: -k allows unsecured connections
