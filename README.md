@@ -147,7 +147,10 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 - sudo ufw enable
 
 
-
+## Dashboard Proxy (hint to get the IP address)
+```
+microk8s dashboard-proxy
+```
 
 #### Test TLS
 - curl https://10.152.183.142/banana -k
