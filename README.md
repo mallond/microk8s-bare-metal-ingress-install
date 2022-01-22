@@ -158,6 +158,12 @@ Escape the characters with \"
 microk8s kubectl patch svc apple-service -p '{\"spec\": {\"type\": \"LoadBalancer\", \"externalIPs\":[\"172.23.100.158\"]}}'
 ```
 
+Get to the VM
+```
+multipass shell microk8s-vm
+
+```
+
 #### Test TLS
 - curl https://10.152.183.142/banana -k
 - Note: -k allows unsecured connections
