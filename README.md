@@ -152,7 +152,7 @@ sudo kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"
 microk8s dashboard-proxy
 ```
 
-## Windows II Hacks
+## Windows 11 and Azure Hacks
 Escape the characters with \"
 ```
 microk8s kubectl patch svc apple-service -p '{\"spec\": {\"type\": \"LoadBalancer\", \"externalIPs\":[\"172.23.100.158\"]}}'
@@ -162,6 +162,13 @@ Get to the VM
 ```
 multipass shell microk8s-vm
 
+```
+
+Azure
+This will install networking plugs for the Azure VM 
+Standard D8s v3 (8 vcpus, 32 GiB memory)
+```
+apt-get install linux-azure
 ```
 
 #### Test TLS
