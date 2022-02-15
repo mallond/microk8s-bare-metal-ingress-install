@@ -164,9 +164,9 @@ multipass shell microk8s-vm
 
 ```
 
-Azure
-This will install networking plugs for the Azure VM 
-Standard D8s v3 (8 vcpus, 32 GiB memory)
+Azure  
+This will install networking plugs for the Azure VM   
+Standard D8s v3 (8 vcpus, 32 GiB memory)  
 ```
 apt-get install linux-azure
 ```
