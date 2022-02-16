@@ -15,7 +15,7 @@ sudo snap install microk8s --classic --channel=1.23/stable
 sudo microk8s status --wait-ready
 ```
 ```
-sudo microk8s enable dashboard dns registry helm ingress
+sudo microk8s enable dashboard dns registry helm3 ingress prometheus
 ```
 ```
 sudo snap alias microk8s.kubectl kubectl    
